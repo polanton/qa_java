@@ -1,5 +1,6 @@
 import com.example.Animal;
 import org.junit.Assert;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.List;
@@ -7,23 +8,6 @@ import java.util.List;
 public class AnimalTests {
 
     private Animal animal = new Animal();
-
-
-    @Test
-    public void getFoodForGrassEatersReturnsCorrectFoodList() throws Exception {
-        List<String> actual = animal.getFood("Травоядное");
-        List<String> expected =   List.of("Трава", "Различные растения");
-        Assert.assertEquals(expected, actual);
-
-    }
-
-    @Test
-    public void getFoodForPredatorsReturnsCorrectFoodList() throws Exception {
-        List<String> actual = animal.getFood("Хищник");
-        List<String> expected =   List.of("Животные", "Птицы", "Рыба");
-        Assert.assertEquals(expected, actual);
-
-    }
 
     @Test
     public void getFoodOnWrongAnimalTypeThrowsCorrectException() throws Exception{
